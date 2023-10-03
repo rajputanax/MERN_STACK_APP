@@ -10,14 +10,17 @@ const PORT = process.env.PORT || 3030;
 
 
 
-const start = async ()=>{
-    await connectDB();
+const start = ()=>{
+    connectDB(); 
    try{
        app.listen(PORT,()=>{
             console.log(`Server is listening on port ${PORT}`)    
         });
-   } catch(error){
+   } 
+   catch(error){
     console.error(`internal server ${error}`)
    }
 }
+
+start();
            
